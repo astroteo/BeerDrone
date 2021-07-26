@@ -1,0 +1,75 @@
+
+==============================================RUN THE FULL SIMULATION
+1. open matlab ( $matlab )
+   locate the matlab path to be  Documents/lufo-RTAPHM-OS-simulator/matlab [see the image Docs/imgs/matlab_path_set.png]
+   click on the folder 'lib_files' and do 'add to path' -> selected folders and subfolders [see image in Docs/imgs/AddLibsToMatlab.png]
+   ensure that the variables are set as follow in main.m file: 
+	gazebo_connect = 1;% 
+	gazebo_connect_debug_mode = 0
+
+   run the main script
+   open the file PusherPropellerPowerDriveGazeboConnected.slx but, !! DO NOT RUN IT YET!!
+
+2. Launch the flight simulator: 
+
+(ensure to be in the root of the project, e.g. cd  Documents/lufo-RTAPHM-OS-simulator)
+
+./launch.sh VTOL
+
+3. run the simulink simulation
+	
+  press play on simulink.
+
+
+4. command a mission to the virtual A/C 
+	4a. remove previous flight plan 
+	4b. create a new flight plan ( select takeoff, confirm VTOL transition, add a bunch of waypoints) 
+	4c. upload the waypoints
+	4d. command the flight!
+
+5. plot results 
+
+in matlab run the script plot_datasim.m 
+
+===== IMPORTANT NOTES: 
+
+if the Simulnink simulation is not started, a "transition-timeout" will be triggered and the A/C will automatically return to the 
+
+
+==============================================RUN ONLY THE MATLAB SIMULATOR: 
+
+1. open matlab ( $matlab )
+   locate the matlab path to be  Documents/lufo-RTAPHM-OS-simulator/matlab [see the image Docs/imgs/matlab_path_set.png]
+   click on the foldes and do 'add to path' -> selected folders and subfolders [see image add in Docs/imgs/AddLibsToMatlab.png]
+   ensure that the variables are set as follow in main.m: 
+	gazebo_connect = 0;
+	gazebo_connect_debug_mode = 1
+
+   the python script send_UDPDUmmy.py ensures that the simulation do not crash 
+
+ 
+
+==============================================RUN IN DEBUG MODE:
+1. open matlab ( $matlab )
+   locate the matlab path to be  Documents/lufo-RTAPHM-OS-simulator/matlab [see the image Docs/imgs/matlab_path_set.png]
+   click on the folder 'lib_files' and do 'add to path' -> selected folders and subfolders [see image in Docs/imgs/AddLibsToMatlab.png]
+   ensure that the variables are set as follow in main.m file: 
+	gazebo_connect = 1;% 
+	gazebo_connect_debug_mode = 0
+
+   run the main script
+   open the file PusherPropellerPowerDriveGazeboConnected.slx but, !! DO NOT RUN IT YET!!
+
+2. locate yourself in the LuFO-plugins folder
+	./test_gazebo_plugins.sh
+
+
+this launches a fake A/C but no mission is commanded! 
+
+
+==============================================TROUBLESHOOTING:
+
+1. sudo issues on matlab side: I messed up by launching matlab as sudo ( e.g.$sudo matlab instead of $matlab) if this is the case please copy-paste all the matlab files in a folder not linked to the git repository and launch these files instead of the original ones. Moreover ensure that read-write access to all matlab files (*.m, *mat, *.slx) 
+
+
+ 

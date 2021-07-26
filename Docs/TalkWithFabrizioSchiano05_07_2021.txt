@@ -1,0 +1,22 @@
+
+1. RC-transmitter (~joystick) is strictly needed !
+  (Spekrum RC satellite receiver is included but transmitter is not!)
+   => FrSky recommended interface
+   https://shop.jonathan.it/it/444646-spektrum-dx6-dsmx-solo-tx?gclid=Cj0KCQjw24qHBhCnARIsAPbdtlL8PHg912QffTjVq_l85-DqcCfXc1Javv20kKQsYDTmN-Oys67afSwaApkdEALw_wcB
+2. I must buy the batteries too:
+  https://www.thunderpowerrc.com/products/tp3400-4spx25?variant=31080855339072
+
+
+3. Do transition from GPS-> AltNav.
+  => tune the EKF2_AID_MASK  https://docs.px4.io/master/en/advanced_config/parameter_reference.html#EKF2_AID_MASK)
+  => https://docs.px4.io/master/en/ros/external_position_estimation.html
+
+4. Check for pin availability for the "beer-sensor":
+  https://docs.modalai.com/voxl-datasheet-connectors/
+    (At least an USB port shuld be available available
+      => brute force solution:
+            1. use magnetic contact sensor: https://www.instructables.com/How-to-Use-a-Magnetic-Door-Switch-Sensor-With-Ardu/
+            2. apply this stuff to talk through usb: https://it.rs-online.com/web/p/alimentazione-motori-e-strumenti-di-sviluppo-per-robotica/2014410/?cm_mmc=IT-PLA-DS3A-_-google-_-CSS_IT_IT_Raspberry_Pi_%26_Arduino_e_Strumenti_di_sviluppo_Whoop-_-(IT:Whoop!)+Alimentazione+%26+motori+e+strumenti+di+sviluppo+per+robotica-_-2014410&matchtype=&pla-303802414008&gclid=CjwKCAjw_o-HBhAsEiwANqYhp6ZFgiTyjBEtpfTvyxRn_clTPjsEWzLDeVnhKPm2kEelq6VYT3Vt2hoCvU4QAvD_BwE&gclsrc=aw.ds
+              or
+              https://www.taskit.de/entwicklung/produkt-entwicklung/usb-gpio-module/?gclid=CjwKCAjw_o-HBhAsEiwANqYhp-2CtxVN9rMM97lzSOMr-0zDtUrO8gVPSBiVVaUNSGdYnWGzY-c9IRoCX0oQAvD_BwE&utm_referrer=https%3A%2F%2Fwww.google.com%2F
+    )

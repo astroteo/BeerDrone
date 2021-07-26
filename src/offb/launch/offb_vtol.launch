@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+
+<rosparam param="use_sim_time">true</rosparam>
+
+  <!-- VTOL, requires px4-launch file modified (~renamed) @ ./px4-firmware/launch/-->
+
+ <include file="$(find px4)/launch/mavros_posix_sitl.launch">
+ <arg name="vehicle" value="standard_vtol"/>
+ <arg name="verbose" value="true" />
+ <arg name ="debug" value="false"/>
+ <arg name="world" value="$(find mavlink_sitl_gazebo)/worlds/luFO.world" />
+ <!--
+
+
+  <arg name="vehicle" value="lufo_vtol"/>
+ -->
+</include>
+<!--
+  <node name="offb" pkg="offb" type="offb_node" output="screen"/>
+-->
+    <!-- ADD HERE SECOND NODE e.g. Python => for intercepting
+        actuators value(s)/command(s)-->
+</launch>

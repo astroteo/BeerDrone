@@ -1,0 +1,69 @@
+0. Install Gstreamer
+  sudo apt-get install libgstreamer-plugins-base1.0-dev
+
+1. Compile PX4-firmware:
+  catkin clean
+  catkin build
+
+  cd Firmware (px4-firmware)
+  # make -j3 px4_sitl_default gazebo -> default quadrotor!
+    make -j3 px4_sitl gazebo_standard_vtol # ->  the VTOL quadcruiser-like !! Some methods has been overrided / implemented for intefacing with simulink
+
+        # -j3 to avoid crashes on not powerful computers.
+
+2. Install geographic_lib_dataset:
+
+   wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
+   chmod +x ./install_geographiclib_datasets.sh
+   sudo ./install_geographiclib_datasets.sh
+
+3.  download QGroundcontrol from here:
+   https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage
+   chmod +x ./QGroundControl.AppImage
+   sudo usermod -a -G dialout $USER #-> required to be able to connect QGroundControl
+   sudo apt-get remove modemmanager #-> same!
+       #=> do not forget to set the metrci units!
+
+
+4.  re-compile including LuFO plugins
+    ./add_lufo_plugins.sh
+
+ =>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>==>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>==>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>==>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
+Followed build as explained here:
+https://gaas.gitbook.io/guide/software-realization-build-your-own-autonomous-drone/build-your-own-autonomous-drone-e01-offboard-control-and-gazebo-simulation
+
+and same as here (as build from source):
+https://github.com/mavlink/mavros/blob/master/mavros/README.md
+
+=> this include tricks for installing mavlink via wstool + tee -a /tmp/mavros.rosinstall
+
+TROUBLE-SHOOTING WITH SUDO ISSUE (log with error on tfdf  =>   https://answers.ros.org/question/281477/ioerror-errno-13-permission-denied-rosrosdepsourcescacheindex/)
+
+sudo rosdep init ( + clean cache file(s) if needed)
+rosdep update ( ! NO-sudo important ! )
+
+
+
+KEY-POINTS:
+	1.  Iris-Quadcopter:  checkout at Firmware version v1.8.0 (&& make posix_sitl_default gazebo) => ./Firmware
+    1b. Standard-VTOL:  checkout at Firmware version v1.9.0 (&& make posix_sitl_default gazebo) => ./px4-firmware
+        !! the  following files have been modified/added:
+                  1.ADD:  ./px4-firmware/launch/vtol_mavros_posix_sitl.launch => modified arg="vehicle" -> default="standard_vtol"
+                          as duly-modified version of: mavros_posix_sitl.launch
+                  2.MOD:  ./px4-firmware/Tools/sitl_gazebo/models/standard_vtol/standard_vtol.sdf (actually not recommended to remove barometer and magentometer)
+
+	2.  install mavlink via rosinstall-generator toolchain
+	3.  compile as: $catkin build
+        (4. probably un-necessary, but....added environment with path at ~/.bashrc)
+
+__________________________________________________________________________________________________________________________________
+
+
+
+5. source the build
+   source ./devel/setup.bash
+
+
+6. launch!
+   source launch-common.sh
+   ./launch-offb.sh

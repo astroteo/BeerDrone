@@ -1,0 +1,15 @@
+ln -s path_to_fw . 
+
+
+repositories
+	=> TUTTI i nodi 
+	=> Firmware
+	-... tutto cio che è clonabile puo andare qui dentro. 
+
+catkin_ws 
+	-> ln -s path_folder_x 
+
+
+-----------------------
+suggerisce di fare symlink alla cartella col mio modello
+

@@ -1,0 +1,19 @@
+
+MODAL-A.I.:
+  -> ROS indigo
+  -> Payload 1kg (https://docs.modalai.com/voxl-m500-functional-description/#high-level-specs
+                  => => VOXL-M500-DK-R2-2                                                     )
+  -> ~2wks to get home
+  -> -> -> SENSORS:
+            StereoSensors (https://www.modalai.com/products/stereo-camera-pair-and-flex-cable-kit-mkit-00009)
+            Tracking Sensors [VIO, ideal for GPS denied navigation
+                              https://www.modalai.com/products/mkit-00010?variant=31584526630963]
+            4k high resolution
+
+
+GAZEBO-SIMULATION:
+  -> slam ( on stereo-camera [HighLevelStuff
+                              https://www.kudan.io/archives/433])
+
+  -> command PX4 to fly No-GPS (https://github.com/PX4/PX4-Autopilot/issues/7005, )
+      modal-ai: powerful explanation:  https://docs.modalai.com/flying-without-gps/

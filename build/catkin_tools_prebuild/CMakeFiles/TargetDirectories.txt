@@ -1,0 +1,14 @@
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/install/strip.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/_catkin_empty_exported_target.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/rebuild_cache.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/test.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/clean_test_results.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/download_extra_data.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/GMock.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/run_tests.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/edit_cache.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/tests.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/list_install_components.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/install/local.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/doxygen.dir
+/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/CMakeFiles/install.dir

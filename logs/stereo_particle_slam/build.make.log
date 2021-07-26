@@ -1,0 +1,38 @@
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target stereo_particle_slam[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_py
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[  0%] Built target std_msgs_generate_messages_py
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[  8%] [32mBuilding CXX object CMakeFiles/stereo_particle_slam.dir/src/stereo_image_processor.cpp.o[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
+[  8%] Built target geometry_msgs_generate_messages_eus
+[  8%] Built target roscpp_generate_messages_nodejs
+[35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
+[  8%] Built target roscpp_generate_messages_eus
+[35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[  8%] Built target roscpp_generate_messages_lisp
+[  8%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[  8%] Built target geometry_msgs_generate_messages_nodejs
+[  8%] Built target sensor_msgs_generate_messages_py
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
+In file included from [01m[K/home/teobaiguera/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:1:0[m[K:
+[01m[K/home/teobaiguera/Documents/BeerDrone/src/stereo_particle_slam/include/stereo_particle_slam/stereo_image_processor.hh:4:10:[m[K [01;31m[Kfatal error: [m[Kopencv2/xfeatures2d.hpp: No such file or directory
+ #include [01;31m[K<opencv2/xfeatures2d.hpp>[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+CMakeFiles/stereo_particle_slam.dir/build.make:62: recipe for target 'CMakeFiles/stereo_particle_slam.dir/src/stereo_image_processor.cpp.o' failed
+make[2]: *** [CMakeFiles/stereo_particle_slam.dir/src/stereo_image_processor.cpp.o] Error 1
+CMakeFiles/Makefile2:1126: recipe for target 'CMakeFiles/stereo_particle_slam.dir/all' failed
+make[1]: *** [CMakeFiles/stereo_particle_slam.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[  8%] Built target rosgraph_msgs_generate_messages_py
+[  8%] Built target rosgraph_msgs_generate_messages_nodejs
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2
