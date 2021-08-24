@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <launch>
 
-<rosparam param="use_sim_time">true</rosparam>
+<node name="stereo_particle_slam" pkg="stereo_particle_slam" type="stereo_particle_slam_node"  output="screen"/>
 
+<rosparam param="use_sim_time">true</rosparam>
 <!-- Quadcopter(Iris) -->
   <include file="$(find px4)/launch/mavros_posix_sitl.launch"/>
     <node name="offb" pkg="offb" type="offb_node" output="screen"/>
-    <!--
-    <node name="stereo_particle_slam" pkg="stereo_particle_slam" type="stereo_particle_slam_node" output="screen"/>
-  -->
+
+
+
 </launch>

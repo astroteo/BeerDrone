@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/astroteo/Documents/BeerDrone/devel/.private/offb/lib/offb/offb_node"
+  "/home/astroteo/Documents/BeerDrone/devel/.private/offb/lib/offb/offb_node.pdb"
   "CMakeFiles/offb_node.dir/src/offb_node.cpp.o"
-  "/home/teobaiguera/Documents/BeerDrone/devel/.private/offb/lib/offb/offb_node.pdb"
-  "/home/teobaiguera/Documents/BeerDrone/devel/.private/offb/lib/offb/offb_node"
 )
 
 # Per-language clean rules from dependency scanning.

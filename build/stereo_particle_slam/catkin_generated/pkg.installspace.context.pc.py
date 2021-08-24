@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "stereo_particle_slam"
-PROJECT_SPACE_DIR = "/home/teobaiguera/Documents/BeerDrone/install"
+PROJECT_SPACE_DIR = "/home/astroteo/Documents/BeerDrone/install"
 PROJECT_VERSION = "0.0.0"

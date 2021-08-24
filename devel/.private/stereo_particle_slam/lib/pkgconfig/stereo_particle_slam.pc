@@ -1,4 +1,4 @@
-prefix=/home/teobaiguera/Documents/BeerDrone/devel/.private/stereo_particle_slam
+prefix=/home/astroteo/Documents/BeerDrone/devel/.private/stereo_particle_slam
 
 Name: stereo_particle_slam
 Description: Description of stereo_particle_slam

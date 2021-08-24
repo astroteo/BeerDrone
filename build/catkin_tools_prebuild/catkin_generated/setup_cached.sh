@@ -7,6 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/teobaiguera/Documents/BeerDrone/devel/.private/catkin_tools_prebuild:$CMAKE_PREFIX_PATH"
-export PWD='/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild'
-export ROS_PACKAGE_PATH="/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/astroteo/Documents/BeerDrone/devel/.private/catkin_tools_prebuild:$CMAKE_PREFIX_PATH"
+export PWD='/home/astroteo/Documents/BeerDrone/build/catkin_tools_prebuild'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/astroteo/Documents/BeerDrone/devel/.private/catkin_tools_prebuild/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/astroteo/Documents/BeerDrone/build/catkin_tools_prebuild:$ROS_PACKAGE_PATH"

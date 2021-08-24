@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="stereo_particle_slam" pkg="stereo_particle_slam" type="stereo_particle_slam_node"  output="screen"/>
+
+</launch>

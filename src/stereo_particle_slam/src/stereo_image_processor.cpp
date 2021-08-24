@@ -64,7 +64,6 @@ void StereoImageProcessor::toOpenCV(const sensor_msgs::ImageConstPtr& image_ptr,
   cv_bridge::CvImagePtr cv_ptr = cv_bridge::toCvCopy(image_ptr, sensor_msgs::image_encodings::BGR8);
   image = cv_ptr->image;
 }
-
 void StereoImageProcessor::extractORB(cv::Mat& image,std::vector<cv::KeyPoint> keypoints, cv::Mat features)
 {
   this->orb->detectAndCompute(image, cv::Mat(),keypoints, features);
@@ -74,15 +73,14 @@ void StereoImageProcessor::extractORB(cv::Mat& image,std::vector<cv::KeyPoint> k
 void StereoImageProcessor::matchORB()
 {
   // match features between left nd right camera.
-  std::vector<cv::DMatch> matches;
-  matcher->match(this->features,frame_features,matches, cv::Mat());
+
+  matcher->match(this->features_left,this->features_right,this->matches, cv::Mat());
 
   //sort matches and get up to the maximum matched features.
-  std::sort(matches.begin(), matches.end());
-  matches.resize(max_features_match);
+  std::sort(this->matches.begin(),this->matches.end());
+  //(this->matches).resize(max_features_match);
     // ->->extract location of good matches
-
-
+    
   unsigned int n_matches = max_features_match < matches.size()
                                      ?
                           max_features_match : matches.size();

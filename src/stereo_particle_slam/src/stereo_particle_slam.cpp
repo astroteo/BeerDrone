@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
   image_transport::Subscriber sub_right =
                             it_right.subscribe("/stereo/right/image_raw", 1000, &StereoImageProcessor::rightImageReceiveCallback, &sip);
 
-
+  // Subscribe to cameraMatrix topic:
 
   // Don't exit the program.
   ros::spin();

@@ -1,8 +1,8 @@
-prefix=/home/teobaiguera/Documents/BeerDrone/devel/.private/offb
+prefix=/home/astroteo/Documents/BeerDrone/devel/.private/offb
 
 Name: offb
 Description: Description of offb
 Version: 0.0.0
-Cflags: -I/home/teobaiguera/Documents/BeerDrone/src/offb/include
+Cflags: -I/home/astroteo/Documents/BeerDrone/src/offb/include
 Libs: -L${prefix}/lib 
 Requires: 
