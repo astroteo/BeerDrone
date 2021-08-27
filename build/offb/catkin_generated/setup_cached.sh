@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/astroteo/Documents/BeerDrone/devel/.private/offb:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/astroteo/Documents/BeerDrone/devel/.private/offb/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/astroteo/Documents/BeerDrone/devel/.private/offb/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/astroteo/Documents/BeerDrone/build/offb'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/astroteo/Documents/BeerDrone/devel/.private/offb/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/astroteo/Documents/BeerDrone/src/offb:$ROS_PACKAGE_PATH"

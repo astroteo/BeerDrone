@@ -11,6 +11,8 @@ opencv2/opencv.hpp
 -
 opencv2/imgproc/imgproc.hpp
 -
+opencv2/features2d.hpp
+-
 opencv2/imgcodecs.hpp
 /home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/include/stereo_particle_slam/opencv2/imgcodecs.hpp
 image_transport/image_transport.h

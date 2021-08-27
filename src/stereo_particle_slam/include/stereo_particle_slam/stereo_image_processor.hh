@@ -1,6 +1,9 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
-// #include <opencv2/xfeatures2d.hpp>
+ //#include <opencv2/nonfree/xfeatures2d.hpp>
+//# include "opencv2/nonfree/features2d.hpp"
+//#include<opencv2/features2d/features2d.hpp>
+#include <opencv2/features2d.hpp>
 #include "opencv2/imgcodecs.hpp"
 #include <image_transport/image_transport.h>
 #include <string>
@@ -35,10 +38,24 @@ class StereoImageProcessor
     std::vector<cv::Point2f> points_left, points_right;
             //MATCHED extracted features positions
 
-    bool left_extracted = false;
+    int matched_frames = 0;
+    std::vector<cv::Point3f> points_3d;
+    std::map<int,std::vector<cv::Point3f>> map_3d;
+            // triangulated 3D points.
+
+
+
     // data-storage settings.
     bool save_dataset = false;
-    std::string save_disparity_map_path = "";
+    std::string dataset_path = "";
+    // camera matrices
+    //cv::Mat leftK,leftP, rightK, rightP;
+    cv::Mat leftP, rightP;
+
+    // extraction,matcher & triangulation done flags
+    bool left_extracted = false;
+    bool features_matched = false;
+    bool triangulation_done = false;
 
 
 };
