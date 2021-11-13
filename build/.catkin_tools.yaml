@@ -1,6 +1,6 @@
-devel_space: /home/astroteo/Documents/BeerDrone/devel
+devel_space: /home/teobaiguera/Documents/BeerDrone/devel
 install: false
-install_space: /home/astroteo/Documents/BeerDrone/install
+install_space: /home/teobaiguera/Documents/BeerDrone/install
 profile: default
-source_space: /home/astroteo/Documents/BeerDrone/src
-workspace: /home/astroteo/Documents/BeerDrone
+source_space: /home/teobaiguera/Documents/BeerDrone/src
+workspace: /home/teobaiguera/Documents/BeerDrone

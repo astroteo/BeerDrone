@@ -1,6 +1,7 @@
 #include "stereo_particle_slam/stereo_image_processor.hh"
 
 StereoImageProcessor::StereoImageProcessor(){
+
   this->orb = cv::ORB::create(this->max_features);
   this-> matcher = cv::DescriptorMatcher::create("BruteForce-Hamming");
 }
@@ -59,8 +60,12 @@ void StereoImageProcessor::rightImageReceiveCallback(const sensor_msgs::ImageCon
   toOpenCV(image_ptr,this->right_image);
   extractORB(this->right_image, this->keypoints_right, this->features_right);
 
-  matchORB();
-  solveStereo();
+  if(left_extracted)
+  {
+    matchORB();
+    solveStereo();
+  }
+
   /*
   try{
     if (left_extracted)
@@ -113,7 +118,9 @@ void StereoImageProcessor::matchORB()
     for( size_t i = 0; i < n_matches; i++ )
     {
       points_left.push_back( this->keypoints_left[ matches[i].queryIdx].pt );
-      points_right.push_back( this->keypoints_right[ matches[i].queryIdx].pt );
+      //points_right.push_back( this->keypoints_right[ matches[i].queryIdx].pt );
+      points_right.push_back( this->keypoints_right[ matches[i].trainIdx].pt );
+
     }
 
     features_matched = true;
@@ -149,7 +156,7 @@ void StereoImageProcessor::solveStereo()
 
   if(save_dataset)
   {
-
+    cnt_save_frames++;
     // info file:
     std::ofstream infofile;
     std::string infofname = "info_frame" + std::to_string(matched_frames) + ".txt";
@@ -162,18 +169,18 @@ void StereoImageProcessor::solveStereo()
     infofile.close();
     // save left image with extracted features
     for (auto pt : points_left)
-      circle(this->left_image,pt,3, cv::Scalar(255,0,0));
+      circle(this->left_image,pt,1,CV_RGB(0, 255, 0), -1, CV_AA);
 
-    cv::imwrite("imgLeft" + std::to_string(matched_frames) + ".png",this->left_image);
+    cv::imwrite(dataset_path + "/left/imgLeft" + std::to_string(cnt_save_frames) + ".png",this->left_image);
 
     // save right image with extracted features
     for (auto pt : points_right)
-      circle(this->right_image,pt,3, cv::Scalar(255,0,0));
+      cv::circle(this->right_image, pt, 1,CV_RGB(0, 255, 0), -1, CV_AA);//circle(this->right_image,pt,3, cv::Scalar(255,0,0));
 
-    cv::imwrite("imgRight" + std::to_string(matched_frames) + ".png",this->right_image);
+    cv::imwrite(dataset_path +"/right/imgRight" + std::to_string(cnt_save_frames) + ".png",this->right_image);
 
     // save keypoints in .txt
-    std::string fname = "keypoints_frame" + std::to_string(matched_frames) + ".txt";
+    std::string fname = "keypoints_frame" + std::to_string(cnt_save_frames) + ".txt";
 
     std::ofstream kpfile;
     kpfile.open (fname, std::fstream::app);

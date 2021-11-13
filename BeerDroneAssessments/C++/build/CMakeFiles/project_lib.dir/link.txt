@@ -1,0 +1,2 @@
+/usr/bin/ar qc libproject_lib.a  CMakeFiles/project_lib.dir/src/orbExtractor.cpp.o CMakeFiles/project_lib.dir/src/matcherTriangulator.cpp.o
+/usr/bin/ranlib libproject_lib.a

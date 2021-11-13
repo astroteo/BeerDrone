@@ -2,7 +2,7 @@
 
 #include <ros/ros.h>
 #include "stereo_particle_slam/stereo_image_processor.hh"
-
+#include <string>
 
 #define DATASET_CREATE true;
 #define DATASET_PATH  "/home/teobaiguera/Documents/BeerDrone/Datasets/test1/";
@@ -21,6 +21,7 @@ int main(int argc, char* argv[])
   //Create image processor
   StereoImageProcessor sip;
   sip.save_dataset = true;
+  std::string dataset_path_ = "/home/teobaiguera/Documents/BeerDrone/Datasets/test1";
   sip.dataset_path = DATASET_PATH;
 
 

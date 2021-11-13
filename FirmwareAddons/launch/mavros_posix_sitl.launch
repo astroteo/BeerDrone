@@ -12,10 +12,10 @@
     <!-- vehicle model and world -->
     <arg name="est" default="ekf2"/>
     <arg name="vehicle" default="iris"/>
-    <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/drone_race_track_2018_actual.world"/>
+    <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/empty_modified.world"/>
     <!-- <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf"/> -->
 
-    <arg name="sdf" default="/home/astroteo/Documents/BeerDrone/Firmware/Tools/sitl_gazebo/models/iris_stereo_camera/iris_stereo_camera.sdf"/>
+    <arg name="sdf" default="/home/teobaiguera/Documents/BeerDrone/Firmware/Tools/sitl_gazebo/models/iris_stereo_camera/iris_stereo_camera.sdf"/>
 
     <!-- gazebo configs -->
     <arg name="gui" default="true"/>

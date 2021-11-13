@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/matcherTriangulator.h
+orbExtractor.h
+../include/orbExtractor.h
+array
+-
+
+../include/orbExtractor.h
+iostream
+-
+opencv2/opencv.hpp
+-
+opencv2/features2d.hpp
+-
+math.h
+-
+
+/home/teobaiguera/Documents/BeerDroneAssessments/C++/src/matcherTriangulator.cpp
+matcherTriangulator.h
+/home/teobaiguera/Documents/BeerDroneAssessments/C++/src/matcherTriangulator.h
+
+/home/teobaiguera/Documents/BeerDroneAssessments/C++/src/orbExtractor.cpp
+orbExtractor.h
+/home/teobaiguera/Documents/BeerDroneAssessments/C++/src/orbExtractor.h
+

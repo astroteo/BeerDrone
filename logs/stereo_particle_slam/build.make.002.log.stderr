@@ -1,39 +1,7 @@
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:[m[K In member function ‘[01m[Kvoid StereoImageProcessor::leftImageReceiveCallback(const ImageConstPtr&)[m[K’:
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:19:75:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KStereoImageProcessor::extractORB(cv::Mat&, std::vector<cv::KeyPoint>&, cv::Mat&)[m[K’
-   19 |     extractORB(this->left_image, this->keypoints_left, this->features_left[01;31m[K)[m[K;
-      |                                                                           [01;31m[K^[m[K
-In file included from [01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:1[m[K:
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/include/stereo_particle_slam/stereo_image_processor.hh:18:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid StereoImageProcessor::extractORB(cv::Mat&)[m[K’
-   18 |     void [01;36m[KextractORB[m[K(cv::Mat& image);
-      |          [01;36m[K^~~~~~~~~~[m[K
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/include/stereo_particle_slam/stereo_image_processor.hh:18:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:[m[K In member function ‘[01m[Kvoid StereoImageProcessor::rightImageReceiveCallback(const ImageConstPtr&)[m[K’:
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:43:78:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KStereoImageProcessor::extractORB(cv::Mat&, std::vector<cv::KeyPoint>&, cv::Mat&)[m[K’
-   43 |     extractORB(this->right_image, this->keypoints_right, this->features_right[01;31m[K)[m[K;
-      |                                                                              [01;31m[K^[m[K
-In file included from [01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:1[m[K:
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/include/stereo_particle_slam/stereo_image_processor.hh:18:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid StereoImageProcessor::extractORB(cv::Mat&)[m[K’
-   18 |     void [01;36m[KextractORB[m[K(cv::Mat& image);
-      |          [01;36m[K^~~~~~~~~~[m[K
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/include/stereo_particle_slam/stereo_image_processor.hh:18:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:[m[K In member function ‘[01m[Kvoid StereoImageProcessor::extractORB(cv::Mat&)[m[K’:
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:70:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kkeypoints[m[K’ was not declared in this scope; did you mean ‘[01m[Kkeypoints_left[m[K’?
-   70 |   this->orb->detectAndCompute(image, cv::Mat(),[01;31m[Kkeypoints[m[K, features);
-      |                                                [01;31m[K^~~~~~~~~[m[K
-      |                                                [32m[Kkeypoints_left[m[K
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:70:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kfeatures[m[K’ was not declared in this scope; did you mean ‘[01m[Kmax_features[m[K’?
-   70 |   this->orb->detectAndCompute(image, cv::Mat(),keypoints, [01;31m[Kfeatures[m[K);
-      |                                                           [01;31m[K^~~~~~~~[m[K
-      |                                                           [32m[Kmax_features[m[K
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:[m[K In member function ‘[01m[Kvoid StereoImageProcessor::matchORB()[m[K’:
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:78:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass StereoImageProcessor[m[K’ has no member named ‘[01m[Kfeatures[m[K’; did you mean ‘[01m[Kmax_features[m[K’?
-   78 |   matcher->match(this->[01;31m[Kfeatures[m[K,frame_features,matches, cv::Mat());
-      |                        [01;31m[K^~~~~~~~[m[K
-      |                        [32m[Kmax_features[m[K
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:78:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kframe_features[m[K’ was not declared in this scope; did you mean ‘[01m[Kmax_features[m[K’?
-   78 |   matcher->match(this->features,[01;31m[Kframe_features[m[K,matches, cv::Mat());
-      |                                 [01;31m[K^~~~~~~~~~~~~~[m[K
-      |                                 [32m[Kmax_features[m[K
-make[2]: *** [CMakeFiles/stereo_particle_slam.dir/build.make:63: CMakeFiles/stereo_particle_slam.dir/src/stereo_image_processor.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:516: CMakeFiles/stereo_particle_slam.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2
+[01m[K/home/teobaiguera/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:[m[K In member function ‘[01m[Kvoid StereoImageProcessor::matchORB()[m[K’:
+[01m[K/home/teobaiguera/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:120:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+     [01;31m[K}[m[K
+     [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/stereo_particle_slam.dir/src/stereo_image_processor.cpp.o] Error 1
+make[1]: *** [CMakeFiles/stereo_particle_slam.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,4 @@
+/home/teobaiguera/Documents/BeerDroneAssessments/C++/build/CMakeFiles/rebuild_cache.dir
+/home/teobaiguera/Documents/BeerDroneAssessments/C++/build/CMakeFiles/project_lib.dir
+/home/teobaiguera/Documents/BeerDroneAssessments/C++/build/CMakeFiles/edit_cache.dir
+/home/teobaiguera/Documents/BeerDroneAssessments/C++/build/CMakeFiles/main.dir

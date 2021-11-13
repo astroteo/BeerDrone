@@ -67,14 +67,14 @@ set(offb_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(offb_SOURCE_PREFIX /home/astroteo/Documents/BeerDrone/src/offb)
-  set(offb_DEVEL_PREFIX /home/astroteo/Documents/BeerDrone/devel/.private/offb)
+  set(offb_SOURCE_PREFIX /home/teobaiguera/Documents/BeerDrone/src/offb)
+  set(offb_DEVEL_PREFIX /home/teobaiguera/Documents/BeerDrone/devel/.private/offb)
   set(offb_INSTALL_PREFIX "")
   set(offb_PREFIX ${offb_DEVEL_PREFIX})
 else()
   set(offb_SOURCE_PREFIX "")
   set(offb_DEVEL_PREFIX "")
-  set(offb_INSTALL_PREFIX /home/astroteo/Documents/BeerDrone/install)
+  set(offb_INSTALL_PREFIX /home/teobaiguera/Documents/BeerDrone/install)
   set(offb_PREFIX ${offb_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/astroteo/Documents/BeerDrone/install/lib;/home/astroteo/Documents/BeerDrone/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/teobaiguera/Documents/BeerDrone/install/lib;/home/teobaiguera/Documents/BeerDrone/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(offb_LIBRARIES ${offb_LIBRARIES})
 
   _list_append_unique(offb_LIBRARY_DIRS ${${offb_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(offb_EXPORTED_TARGETS ${${offb_dep}_EXPORTED_TARGETS})
+  list(APPEND offb_EXPORTED_TARGETS ${${offb_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

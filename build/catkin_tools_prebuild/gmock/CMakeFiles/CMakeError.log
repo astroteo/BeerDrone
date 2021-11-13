@@ -1,0 +1,59 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/gmock/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5591f/fast"
+make[3]: Entering directory '/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/gmock/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5591f.dir/build.make CMakeFiles/cmTC_5591f.dir/build
+make[4]: Entering directory '/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/gmock/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5591f.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_5591f.dir/CheckSymbolExists.c.o   -c /home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/gmock/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_5591f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5591f.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_5591f.dir/CheckSymbolExists.c.o  -o cmTC_5591f 
+CMakeFiles/cmTC_5591f.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5591f.dir/build.make:97: recipe for target 'cmTC_5591f' failed
+make[4]: *** [cmTC_5591f] Error 1
+make[4]: Leaving directory '/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/gmock/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5591f/fast' failed
+make[3]: *** [cmTC_5591f/fast] Error 2
+make[3]: Leaving directory '/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/gmock/CMakeFiles/CMakeTmp'
+
+File /home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/gmock/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/gmock/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3d85e/fast"
+make[3]: Entering directory '/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/gmock/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_3d85e.dir/build.make CMakeFiles/cmTC_3d85e.dir/build
+make[4]: Entering directory '/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/gmock/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3d85e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3d85e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3d85e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d85e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_3d85e.dir/CheckFunctionExists.c.o  -o cmTC_3d85e -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3d85e.dir/build.make:97: recipe for target 'cmTC_3d85e' failed
+make[4]: *** [cmTC_3d85e] Error 1
+make[4]: Leaving directory '/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/gmock/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3d85e/fast' failed
+make[3]: *** [cmTC_3d85e/fast] Error 2
+make[3]: Leaving directory '/home/teobaiguera/Documents/BeerDrone/build/catkin_tools_prebuild/gmock/CMakeFiles/CMakeTmp'
+
+

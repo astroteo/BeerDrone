@@ -1,4 +1,4 @@
-prefix=/home/astroteo/Documents/BeerDrone/install
+prefix=/home/teobaiguera/Documents/BeerDrone/install
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild

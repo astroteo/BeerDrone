@@ -27,7 +27,7 @@ class StereoImageProcessor
     cv::Mat left_image,right_image;
 
     // features extractor, features, keypoints, features matcher
-    int max_features = 5000;
+    int max_features = 500;
     int max_features_match= 50;
     cv::Ptr<cv::Feature2D> orb;
     cv::Ptr<cv::DescriptorMatcher> matcher;
@@ -39,6 +39,7 @@ class StereoImageProcessor
             //MATCHED extracted features positions
 
     int matched_frames = 0;
+    int cnt_save_frames =0;
     std::vector<cv::Point3f> points_3d;
     std::map<int,std::vector<cv::Point3f>> map_3d;
             // triangulated 3D points.

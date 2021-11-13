@@ -1,7 +1,0 @@
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:[m[K In member function ‘[01m[Kvoid StereoImageProcessor::solveStereo()[m[K’:
-[01m[K/home/astroteo/Documents/BeerDrone/src/stereo_particle_slam/src/stereo_image_processor.cpp:153:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kfstream[m[K’ has not been declared
-  153 |     kpfile.open (fname, [01;31m[Kfstream[m[K::app);
-      |                         [01;31m[K^~~~~~~[m[K
-make[2]: *** [CMakeFiles/stereo_particle_slam.dir/build.make:63: CMakeFiles/stereo_particle_slam.dir/src/stereo_image_processor.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:516: CMakeFiles/stereo_particle_slam.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2
